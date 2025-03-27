@@ -15,15 +15,11 @@
   <header class="cabecalho">
     <div class="container">
       <div class="logo">
-        <a href="./index.html">
-          <img src="./assets/img/logo-cidades.png" alt="Logo Cabeçalho">
-        </a>
       </div>
-
       <nav class="menu">
         <ul>
           <li><a href="./index.html">Página inicial</a></li>
-          <li><a href="./complemento.html">Complemento</a></li>
+          <li><a href="./mapa.html">Mapa</a></li>
           <li><a href="./sugestao.html">Sugestão</a></li>
         </ul>
       </nav>
@@ -32,34 +28,20 @@
 
   <main class="principal">
     <div class="container-titulo">
-      <h1>Sidney</h1>
+      <h1>Segurança Digital</h1>
     </div>
 
     <div class="container-img">
-      <img src="./assets/img/sydney.jpg" alt="Imagem panorâmica de Sydney" width="100%" />
+      <img src="./assets/img/cyber.jpg" alt="Imagem cybersecurity" width="100%" />
     </div>
 
     <div class="modulo sobre">
       <div class="container">
         <h2></h2>
         <p>
-          Sydney é a capital do estado de Nova Gales do Sul e a
-          cidade mais populosa de toda a Austrália e Oceania.</br></br>
-          Está localizada na costa sudeste do país, ao longo do mar da Tasmânia e
-          em torno de um dos maiores portos naturais do mundo.</br></br>
-          Os moradores são conhecidos localmente como sydneysiders e constituem
-          a cidade mais multicultural da Austrália. A área em torno de Sydney
-          era habitada por indígenas australianos há milênios. Os primeiros
-          colonos britânicos chegaram em 1788 com o capitão Arthur Phillip e
-          fundaram Sydney inicialmente como uma colônia penal. Os
-          sucessivos governadores coloniais ajudaram a transformar o
-          assentamento em uma metrópole próspera e independente.
+          Segurança digital refere-se ao conjunto de práticas, ferramentas e medidas utilizadas para proteger dados, sistemas e dispositivos contra ameaças cibernéticas. 
+          Ela envolve a proteção de informações pessoais, confidenciais e corporativas contra acessos não autorizados, danos ou perdas.
         </p>
-        <div class="container-btn">
-          <button class="btn-saiba-mais">
-            <a target="_blank" href="https://pt.wikipedia.org/wiki/Sydney">Saiba Mais</a>
-          </button>
-        </div>
       </div>
     </div>
 
@@ -70,22 +52,26 @@
           <thead>
             <tr>
               <th>País</th>
-              <td>Austrália</td>
+              <th>Tentativas de Ataques (2022)</th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
-              <th>Estado</th>
-              <td>Nova Gales do Sul</td>
+              <th>Brasil</th>
+              <td>103,1 bilhões de tentativas</td>
             </tr>
             <tr>
-              <th>População</th>
-              <td>5.600,160</td>
+              <th>Colômbia</th>
+              <td>90.063 tentativas (segundo semestre)</td>
             </tr>
             <tr>
-              <th>Área</th>
-              <td>12.145 km²</td>
+              <th>Argentina</th>
+              <td>25.800 tentativas (segundo semestre)</td>
+            </tr>
+            <tr>
+              <th>Chile</th>
+              <td>24.184 tentativas (segundo semestre)</td>
             </tr>
           </tbody>
         </table>
@@ -93,12 +79,29 @@
     </div>
 
     <div class="modulo lista-locais">
-      <h2 class="subtitulo">Lista de locais de interesse</h2>
+      <h2 class="subtitulo">Links de referência</h2>
       <ul>
-        <li>Opera House</li>
-        <li>Ponte da Baia de Sydney</li>
-        <li>Porto de Darling</li>
-        <li>Jardim Botânico Real</li>
+        <li input type="button" value="Opera Houset" onclick="newDoc()"> 
+          <script>
+          function newDoc() {
+            window.location.assign("https://jornal.usp.br/radio-usp/brasil-sofreu-mais-de-100-bilhoes-de-tentativas-de-ataques-ciberneticos-no-ultimo-ano/?utm_source=chatgpt.com")
+          }
+          </script> USP Jornal
+        </li>
+        <li input type="button" value="Opera Houset" onclick="newDoc()"> 
+          <script>
+          function newDoc() {
+            window.location.assign("https://oglobo.globo.com/economia/tecnologia/noticia/2023/06/brasil-e-o-maior-alvo-de-ataques-ciberneticos-na-america-latina-veja-ranking.ghtml?utm_source=chatgpt.com")
+          }
+          </script> Jornal o Globo
+        </li>
+        <li input type="button" value="Opera Houset" onclick="newDoc()"> 
+          <script>
+          function newDoc() {
+            window.location.assign("https://www.channelpartner.es/seguridad/el-numero-de-ciberataques-en-el-mundo-se-doblara-este-ano/?utm_source=chatgpt.com")
+          }
+          </script> Channel Partner
+        </li>
       </ul>
     </div>
   </main>
@@ -106,12 +109,11 @@
   <footer class="rodape">
     <div class="container">
       <div class="logo">
-        <img src="./assets/img/logo-cidades-rodape.png" alt="Logo do rodapé">
       </div>
     </div>
 
     <div class="creditos">
-      <p>&COPY; Copyright 2025 | &#128540 😂 </p>
+      <p>&COPY; Copyright 2025 | Thiago Amaral</p>
     </div>
   </footer>
 

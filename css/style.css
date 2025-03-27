@@ -68,14 +68,14 @@ nav.menu ul li a:hover {
 
 main.principal div.container-titulo {
   width: 100%;
-  background-color: #ff8000;
-  padding: 15px;
+  background-color: silver;
+  padding: 5px;
 }
 
 main.principal div.container-titulo h1 {
   color: #fff;
   text-align: center;
-  font-size: 48px;
+  font-size: 38px;
   text-transform: uppercase;
 }
 
@@ -95,6 +95,15 @@ div.container-btn {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+
+h1.subtitulo,
+div.container-btn {
+  font-size: 20px;
+  text-align: center;
+  text-transform: lowercase;
+  margin-bottom: 30px;
+}
+
 
 .btn-saiba-mais {
   background-color: #ff8000;
@@ -143,7 +152,7 @@ div.lista-locais ul li {
   list-style: none;
   display: inline-block;
   color: #fff;
-  background-color: #ff8000;
+  background-color: silver;
   padding: 7px 12px;
   margin: 0 3px;
   border-radius: 5px;
@@ -151,27 +160,24 @@ div.lista-locais ul li {
 
 footer.rodape {
   width: 100%;
-  padding: 50px 0;
-  background-color: #333;
-  background-image: url(../assets/img/padrao-fundo-rodape.png);
-  border-top: 6px solid #ff8000;
+  padding: 10px;
   text-align: center;
   clear: both;
 }
 
 footer.rodape div.logo {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 footer.rodape div.creditos {
-  color: #fff;
+  color: black;
 }
 
 div.mapa {
   width: 100%;
 }
 
-div.mapa img {
+div.mapa iframe {
   float: left;
   position: relative;
   left: 50%;
@@ -227,3 +233,36 @@ input.form-botao {
 input.form-botao:hover {
   background-color: #ff8000;
 }
+
+div.form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+.form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+.form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+.form-container button:hover {
+            background-color: #45a049;
+        }
+.message {
+            color: red;
+            font-size: 14px;
+        }
+.hidden {
+            display: none;
+        }

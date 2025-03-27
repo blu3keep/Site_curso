@@ -17,15 +17,12 @@
   <header class="cabecalho">
     <div class="container">
       <div class="logo">
-        <a href="./index.html">
-          <img src="./assets/img/logo-cidades.png" alt="" />
-        </a>
       </div>
 
       <nav class="menu">
         <ul>
           <li><a href="./index.html">Ínicio</a></li>
-          <li><a href="./complemento.html">Complemento</a></li>
+          <li><a href="./mapa.html">Mapa</a></li>
           <li><a href="./sugestao.html">Sugestão</a></li>
         </ul>
       </nav>
@@ -39,33 +36,53 @@
       </div>
     </div>
 
-    <div class="sugestao-formulario">
-      <div class="container">
-        <form method="POST">
-          <div class="form-container">
-            <label for="nome">Nome:</label><br />
-            <input type="text" name="nome" id="nome" class="form" placeholder="Insira seu nome" required />
-          </div>
+    <div class="form-container">
+      <h2>Formulário de Contato</h2>
+      <form id="contactForm">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">Enviar</button>
+      </form>
+      <p class="message hidden" id="errorMessage">Por favor, preencha todos os campos!</p>
+    </div>
 
-          <div class="form-container">
-            <label for="email">E-mail:</label><br />
-            <input type="email" name="email" id="email" class="form" placeholder="Ex. nome@provedor.com.br" required />
-          </div>
+    <div id="thankYouScreen" class="hidden">
+      <h2 class="subtitulo">Obrigado pelo seu contato!</h2>
+      <h1 class="subtitulo">Redirecionando para a página principal...</h1>
+    </div>
 
-          <div class="form-container">
-            <label for="telefone">Telefone:</label><br />
-            <input type="tel" name="telefone" id="telefone" class="form" placeholder="Número de contato" required />
-          </div>
+      <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Impede o envio padrão do formulário
 
-          <div class="form-container">
-            <label for="sugestao">Justifique sua sugestao:</label> <br />
-            <textarea name="sugestao" id="sugestao" rows="10" class="form" required></textarea>
-          </div>
+          // Limpar qualquer mensagem de erro anterior
+          document.getElementById('errorMessage').classList.add('hidden');
+          document.getElementById('thankYouScreen').classList.add('hidden');
 
-          <div class="form-container">
-            <!-- todo formulario usa um input type submit como botão -->
-            <input type="submit" class="form-botao" value="Enviar" />
-          </div>
+          // Obter os valores dos campos
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var message = document.getElementById('message').value;
+
+          // Verificar se algum campo está vazio
+          if (name === "" || email === "" || message === "") {
+              document.getElementById('errorMessage').classList.remove('hidden');
+          } else {
+              // Exibir tela de agradecimento
+              document.querySelector('.form-container').classList.add('hidden');
+              document.getElementById('thankYouScreen').classList.remove('hidden');
+
+              // Redirecionar após 8 segundos
+              setTimeout(function() {
+                  window.location.href = 'index.html'; 
+              }, 8000);
+          }
+            });
+      </script>
         </form>
       </div>
     </div>
@@ -74,11 +91,10 @@
   <footer class="rodape">
     <div class="container">
       <div class="logo">
-        <img src="./assets/img/logo-cidades-rodape.png" alt="Logo do rodapé" />
       </div>
 
       <div class="creditos">
-        <p>&COPY; Copyright 2022 | &#128540; by Raphael Rodrigues</p>
+        <p>&COPY; Copyright 2025 | Thiago Amaral</p>
       </div>
     </div>
   </footer>
